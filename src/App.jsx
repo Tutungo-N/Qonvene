@@ -1,9 +1,9 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
-import Signup from './pages/SignUp';
+import Signup from './pages/Signup';
 import Login from './pages/Login';
 import AboutMe from './pages/AboutMe';
 
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
