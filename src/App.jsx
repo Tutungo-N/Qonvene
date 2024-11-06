@@ -8,7 +8,6 @@ import Login from './pages/Login';
 import AboutMe from './pages/AboutMe';
 
 function App() {
-
   return (
     <Router>
     <Layout>

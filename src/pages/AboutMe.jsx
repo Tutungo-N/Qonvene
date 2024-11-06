@@ -1,4 +1,3 @@
-// src/pages/AboutMe.jsx
 import React from 'react';
 
 const AboutMe = () => {
