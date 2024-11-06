@@ -1,17 +1,14 @@
+// src/components/Layout.jsx
 import React from 'react';
-import NavBar from './NavBar'; 
+import Navbar from './NavBar';
 
 const Layout = ({ children }) => {
-    return (
-        <div>
-            <NavBar />  
-            <div className="content">
-                {children} 
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <Navbar />
+      <main className="container mx-auto p-4">{children}</main>
+    </div>
+  );
 };
 
 export default Layout;
-
-
