@@ -70,3 +70,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Blinking cursor */
+.text-teal-500 {
+  animation: blink 1000ms infinite step-end;
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
