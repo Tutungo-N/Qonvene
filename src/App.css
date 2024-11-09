@@ -1,8 +1,29 @@
+
+/* Reset margin and padding for html, body, and all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes sure padding and border don't affect width/height */
+}
+/* Reset body and html margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+
 #root {
-  max-width: 1280px;
+  max-width: 100%;
+  height: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0%;
   text-align: center;
+
 }
 
 .logo {
