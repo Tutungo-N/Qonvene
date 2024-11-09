@@ -4,9 +4,9 @@ const AboutMe = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white flex items-center justify-center px-6">
       <div className="max-w-3xl p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
-        <h1 className="text-3xl font-bold text-center mb-6 text-white">About QonVene</h1>
+        <h1 className="text-3xl font-bold text-center mb-2 text-white">About QonVene</h1>
         
-        <p className="text-lg text-gray-100 text-center mb-8 leading-relaxed">
+        <p className="text-lg text-gray-100 text-center mb-4 leading-relaxed">
           QonVene is designed to bring people together in virtual spaces that feel as real as they are engaging.
           With intuitive tools and custom virtual rooms, QonVene empowers you to create, connect, and celebrate no matter the distance.
         </p>
