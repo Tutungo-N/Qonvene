@@ -11,6 +11,9 @@ const EventCarousel = () => {
     { id: 1, title: 'Corporate Gala', image: event1Image, description: 'Happening on 5th December, Corporate Gala brings together top corporate executives across the global ICT sector.' },
     { id: 2, title: 'Bitcoin Networking Event', image: event2Image, description: 'This event brings together all bitcoin enthusiasts across the globe.' },
     { id: 3, title: 'Business Seminar', image: event3Image, description: 'Open to any business person, an entreprenuer, or anyone who thinks of starting a business.' },
+    { id: 4, title: 'Virtual Culinary', image: event4Image, description: 'A virtual culinary competition on who can showcase their culinary skills better.'},
+    { id: 5, title: 'Dinner Best Practices', image: event5Image, description: 'Teaching chefs the best practices for setting up a corporate dinner table.'},
+    { id: 6, title: 'Public Celebration', image: event6Image, description: 'Celebrating world sportmanship virtually.'},
     // Add more events as needed
   ];
 
