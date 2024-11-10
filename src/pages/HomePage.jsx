@@ -7,11 +7,11 @@ import Testimonials from "../components/Testimonials";
 const HomePage = () => {
 
     return(
-        <main className="bg-teal-500 left-0 w-screen">
-        <div className="container mx-auto p-4 pt-20 relative overflow-x-hidden">
+        <main className="bg-teal-500 left-0 w-screen mx-0 p-0">
+        <div className="container mx-auto py-0 pt-16 relative overflow-x-hidden">
             <Navbar />
         </div>
-        <div className="container mx-0 p-0 left-0 w-full h-screen">
+        <div className="py-0 left-0 w-screen h-screen">
             <HeroSection />
         </div>
         <div className="w-full px-0 py-0">
