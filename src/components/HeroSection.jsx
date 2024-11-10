@@ -18,7 +18,7 @@ const HeroSection = () => {
           } else {
             clearInterval(typingInterval); // Stop the interval once we reach the end of the text
           }
-        }, 1000); // Typing speed
+        }, 50); // Typing speed
     
         return () => clearInterval(typingInterval); // Clear interval on component unmount
       }, []);
@@ -67,7 +67,7 @@ const HeroSection = () => {
                     duration: 0.5,
                     repeatType: "reverse",
                 }}
-                className="text-teal-500"
+                className="text-teal-400"
             >
                 |
             </motion.span>
