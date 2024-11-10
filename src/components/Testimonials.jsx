@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Testimonials = () => {
   // Target values for each statistic
@@ -10,12 +10,34 @@ const Testimonials = () => {
   const [eventsCount, setEventsCount] = useState(0);
   const [connectionsCount, setConnectionsCount] = useState(0);
   const [ratingCount, setRatingCount] = useState(0);
+  const [isCounting, setIsCounting] = useState(false);
+  const sectionRef = useRef(null);
 
   // Incremental speed and duration for counting
-  const duration = 2000; // in milliseconds
+  const duration = 5000; // in milliseconds
   const incrementSpeed = 20; // in milliseconds
 
   useEffect(() => {
+    // Intersection Observer setup
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsCounting(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isCounting) return;
     // Increment function to update each count
     const incrementCount = (setCount, target) => {
       const increment = target / (duration / incrementSpeed);
@@ -40,10 +62,10 @@ const Testimonials = () => {
     return () => {
       clearInterval(incrementCount);
     };
-  }, []);
+  }, [isCounting]);
 
   return (
-    <section className="py-12 bg-gray-900 text-white text-center">
+    <section ref={sectionRef} className="py-12 bg-gray-900 text-white text-center">
       <h2 className="text-3xl font-bold mb-8">Why People Love QonVene</h2>
       <div className="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto">
         <div className="space-y-4">
