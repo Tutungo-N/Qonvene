@@ -10,7 +10,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-500 via-teal-500 to-blue-500">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
         <h2 className="text-2xl font-bold text-center text-indigo-600 mb-8">Welcome Back to QonVene!</h2>
         <form onSubmit={handleLogin} className="space-y-6">
