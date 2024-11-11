@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import { motion } from 'framer-motion';
 
 const Signup = () => {
     const [name, setName] = useState('');
@@ -11,7 +12,14 @@ const Signup = () => {
     };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-500 via-teal-500 to-blue-500">
+    <motion.div
+    initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -50 }}
+    transition={{ duration: 0.5 }}
+    className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-500 via-teal-500 to-blue-500"
+    >
+    {/*<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-500 via-teal-500 to-blue-500">*/}
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
         <h2 className="text-2xl font-bold text-center text-teal-600 mb-8">Join QonVene Today!</h2>
         <form onSubmit={handleSignup} className="space-y-6">
@@ -56,7 +64,8 @@ const Signup = () => {
           Already have an account? <a href="/login" className="text-teal-500 hover:text-teal-700">Login</a>
         </p>
       </div>
-    </div>
+    
+    </motion.div>
   );
 };
 
