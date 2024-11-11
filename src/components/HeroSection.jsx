@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import heroBackground from '../assets/imagev.jpg';
 import '/src/index.css';
 
 const HeroSection = ({ scrollToEventCarousel }) => {
     const [typedText, setTypedText] = useState(""); //State to hold the typed text
+    const navigate = useNavigate(); // Initialize navigate hook
     const textToType = "Transform The Way You Connect!"; // Text to type out
 
     useEffect(() => {
@@ -77,10 +79,14 @@ const HeroSection = ({ scrollToEventCarousel }) => {
         <div className="flex space-x-8 flex-col sm:flex-row">
           <button 
             onClick={scrollToEventCarousel}
-            className="bg-teal-500 hover:bg-teal-400 px-6 py-3 text-lg font-medium rounded-md transition duration-300">
+            className="bg-teal-500 hover:bg-teal-400 px-6 py-3 text-lg font-medium rounded-md transition duration-300"
+            >
             Discover Events
           </button>
-          <button className="bg-transparent border-2 border-teal-500 hover:bg-teal-500 px-6 py-3 text-lg font-medium rounded-md transition duration-300">
+          <button 
+            onClick={() => navigate("/signup")} // Navigate to Signup page
+            className="bg-transparent border-2 border-teal-500 hover:bg-teal-500 px-6 py-3 text-lg font-medium rounded-md transition duration-300"
+            >
             Get Started
           </button>
         </div>
