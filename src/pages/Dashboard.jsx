@@ -8,12 +8,21 @@ const Dashboard = () => {
     const { role } = useUserRole(); // Assuming role is 'organizer' or 'attendee'
   
     return (
-        <div className="flex">
-            <Sidebar />
-            <div className="flex-grow p-6">
-                {role === 'organizer' ? <OrganizerDashboard /> : <AttendeeDashboard />}
+        <motion
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+            
+        >
+            <div className="flex">
+                <Sidebar />
+                <div className="flex-grow p-6">
+                    {role === 'organizer' ? <OrganizerDashboard /> : <AttendeeDashboard />}
+                </div>
             </div>
-        </div>
+        </motion>
+
     );
 };
 
