@@ -8,7 +8,7 @@ const AttendeeDashboard = () => {
     };
 
     return (
-        <div className="flex flex-col min-h-screen bg-gray-100 p-8">
+        <div className="flex flex-col min-h-screen bg-gray-100 p-16">
             <header className="flex justify-between items-center mb-8">
                 <h1 className="text-3xl font-bold">Attendee Dashboard</h1>
                 <input
