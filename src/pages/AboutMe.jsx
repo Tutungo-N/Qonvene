@@ -1,8 +1,16 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AboutMe = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 text-white flex items-center justify-center px-6">
+    <motion.div
+    initial={{ opacity: 0, x: 50 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -50 }}
+    transition={{ duration: 0.5 }}
+    className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-500 via-teal-500 to-blue-500"  
+    >
+    {/*<div className="min-h-screen bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 text-white flex items-center justify-center px-6">*/}
       <div className="max-w-3xl p-8 bg-white bg-opacity-10 backdrop-blur-lg rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
         <h1 className="text-3xl font-bold text-center mb-2 text-white">About QonVene</h1>
         
@@ -37,7 +45,8 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </div>
+  
+    </motion.div>
   );
 };
 
