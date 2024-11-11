@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import heroBackground from '../assets/imagev.jpg';
 import '/src/index.css';
 
-const HeroSection = () => {
+const HeroSection = ({ scrollToEventCarousel }) => {
     const [typedText, setTypedText] = useState(""); //State to hold the typed text
     const textToType = "Transform The Way You Connect!"; // Text to type out
 
@@ -75,7 +75,9 @@ const HeroSection = () => {
         {/*Transform the Way You Connect*/}</h1>
         <p className="text-lg sm:text-xl mb-8">Host, Attend, and Connect Virtually Like Never Before</p>
         <div className="flex space-x-8 flex-col sm:flex-row">
-          <button className="bg-teal-500 hover:bg-teal-400 px-6 py-3 text-lg font-medium rounded-md transition duration-300">
+          <button 
+            onClick={scrollToEventCarousel}
+            className="bg-teal-500 hover:bg-teal-400 px-6 py-3 text-lg font-medium rounded-md transition duration-300">
             Discover Events
           </button>
           <button className="bg-transparent border-2 border-teal-500 hover:bg-teal-500 px-6 py-3 text-lg font-medium rounded-md transition duration-300">
