@@ -6,7 +6,8 @@ import { useUserRole } from '../hooks/useUserRole';
 
 const Dashboard = () => {
     const { role } = useUserRole(); // Assuming role is 'organizer' or 'attendee'
-  
+    
+
     return (
         <motion
             initial={{ opacity: 0, x: 50 }}
