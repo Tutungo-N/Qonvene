@@ -32,6 +32,16 @@ const AttendeeDashboard = () => {
                         <p className="font-semibold">Bitcoin Networking Event</p>
                         <p className="text-gray-600">12th December</p>
                     </div>
+                    <div className="p-4 bg-white shadow rounded-md">
+                        <p className="font-semibold">Business Seminar</p>
+                        <p className="text-gray-600">17th December</p>
+                    </div>
+                    <div className="p-4 bg-white shadow rounded-md">
+                        <p className="font-semibold">Online Gift Competition Opening</p>
+                        <p className="text-gray-600">26th December</p>
+                    </div>
+                    
+                    
                     {/* Add more events as needed */}
                 </div>
             </section>
