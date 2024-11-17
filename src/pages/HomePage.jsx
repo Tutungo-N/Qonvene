@@ -23,7 +23,7 @@ const scrollToEventCarousel = () => {
          initial={{ opacity: 0, x: 50 }}
          animate={{ opacity: 1, x: 0 }}
          exit={{ opacity: 0, x: -50 }}
-         transition={{ duration: 0.5 }}
+         transition={{ duration: 2 }}
         className="bg-teal-500 left-0 w-screen mx-0 p-0"
         >
 
