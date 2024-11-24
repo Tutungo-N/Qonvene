@@ -58,6 +58,11 @@ const AttendeeDashboard = () => {
                         <p className="font-semibold">Virtual Culinary</p>
                         <p className="text-gray-600">Registered on 10th October</p>
                     </li>
+                    <li className="mb-4">
+                        <p className="font-semibold">Webinar</p>
+                        <p className="text-gray-600">Registered on 11th November</p>
+                    </li>
+                    
                     {/* Add more events as needed */}
                 </ul>
             </section>
