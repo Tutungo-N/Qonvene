@@ -26,7 +26,7 @@ const scrollToEventCarousel = () => {
          transition={{ duration: 2 }}
         className="bg-teal-500 left-0 w-screen mx-0 p-0"
         >
-
+        
         {/*<main className="bg-teal-500 left-0 w-screen mx-0 p-0">*/}
         <div className="container mx-auto py-0 pt-16 relative overflow-x-hidden">
             <Navbar />
